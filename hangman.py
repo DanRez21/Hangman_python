@@ -141,7 +141,7 @@ def hangman(secret_word):
             print("Good guess: ", get_guessed_word(secret_word, all_letter))
           else:
             #if the letter was entered earlier
-            if i in all_letter or not i.isalpha() or i not in string.ascii_lowercase:
+            if i in all_letter or not i.isalpha() or i not in string.ascii_lowercase or len(i)!=1:
               if i in all_letter:
                 msg="You've already guessed that letter."
               else:
@@ -162,7 +162,7 @@ def hangman(secret_word):
               print("Oops! That letter is not in my word: ", get_guessed_word(secret_word, all_letter))
           a = False
     if guesses_remaining > 0:
-      print("Congratulations, you won! Your total score for this game is: ", guesses_remaining * len(set(all_letter)))
+      print("Congratulations, you won! Your total score for this game is: ", guesses_remaining * len(set(secret_word)))
     else:
       print("Sorry, you ran out of guesses. The word was {}".format(secret_word))
 
@@ -272,7 +272,7 @@ def hangman_with_hints(secret_word):
               print("Possible word matches are: ")
               show_possible_matches(get_guessed_word(secret_word, all_letter))
             #if the letter was entered earlier
-            elif i in all_letter or not i.isalpha() or i not in string.ascii_lowercase:
+            elif i in all_letter or not i.isalpha() or i not in string.ascii_lowercase or len(i)!=1:
               if i in all_letter:
                 msg="You've already guessed that letter."
               else:
@@ -294,7 +294,7 @@ def hangman_with_hints(secret_word):
           a = False
     print('-' * 13)
     if guesses_remaining > 0:
-      print("Congratulations, you won! Your total score for this game is: ", guesses_remaining * len(set(all_letter)))
+      print("Congratulations, you won! Your total score for this game is: ", guesses_remaining * len(set(secret_word)))
     else:
       print("Sorry, you ran out of guesses. The word was {}".format(secret_word))
 
