@@ -108,6 +108,7 @@ def hangman(secret_word):
       letters the secret_word contains and how many guesses s/he starts with.
       
     * The user should start with 6 guesses
+
     * Before each round, you should display to the user how many guesses
       s/he has left and the letters that the user has not yet guessed.
     
@@ -116,6 +117,7 @@ def hangman(secret_word):
     
     * The user should receive feedback immediately after each guess 
       about whether their guess appears in the computer's word.
+
     * After each guess, you should display to the user the 
       partially guessed word so far.
     
@@ -240,6 +242,7 @@ def hangman_with_hints(secret_word):
       
     * The user should receive feedback immediately after each guess 
       about whether their guess appears in the computer's word.
+
     * After each guess, you should display to the user the 
       partially guessed word so far.
       
