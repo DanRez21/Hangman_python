@@ -108,7 +108,6 @@ def hangman(secret_word):
       letters the secret_word contains and how many guesses s/he starts with.
       
     * The user should start with 6 guesses
-
     * Before each round, you should display to the user how many guesses
       s/he has left and the letters that the user has not yet guessed.
     
@@ -117,7 +116,6 @@ def hangman(secret_word):
     
     * The user should receive feedback immediately after each guess 
       about whether their guess appears in the computer's word.
-
     * After each guess, you should display to the user the 
       partially guessed word so far.
     
@@ -242,7 +240,6 @@ def hangman_with_hints(secret_word):
       
     * The user should receive feedback immediately after each guess 
       about whether their guess appears in the computer's word.
-
     * After each guess, you should display to the user the 
       partially guessed word so far.
       
@@ -264,7 +261,7 @@ def hangman_with_hints(secret_word):
           print("You have {} guesses left.".format(guesses_remaining))
           print("Available letters: ", get_available_letters(all_letter))
           i = input("Please guess a letter: ").lower()
-          if i in secret_word and i not in all_letter and i!='':
+          if i in secret_word and i not in all_letter and i!='' and len(i)==1:
             all_letter.append(i)
             print("Good guess: ", get_guessed_word(secret_word, all_letter))
           else:
